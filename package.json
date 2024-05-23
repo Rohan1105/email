@@ -1,0 +1,25 @@
+{
+  "name": "sdp-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^17.3.8",
+    "@angular/compiler": "^17.3.8",
+    "@angular/core": "^17.3.8",
+    "@angular/forms": "^17.3.8",
+    "@angular/platform-browser": "^17.3.8",
+    "@angular/platform-browser-dynamic": "^17.3.8",
+    "@angular/router": "^17.3.8",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.3",
+    "rxjs": "^7.8.1"
+  }
+}

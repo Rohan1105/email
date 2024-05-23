@@ -1,0 +1,31 @@
+<div>
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" [(ngModel)]="userId">
+  
+    <label for="userName">User Name:</label>
+    <input type="text" id="userName" [(ngModel)]="userName">
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password">
+  
+    <button (click)="createUser()">Create User</button><br><br>
+</div>
+<div>
+    <label for="emailId">Email ID:</label>
+    <input type="text" id="emailId" [(ngModel)]="emailId"><br><br>
+  
+    <label for="emailTitle">Email Title:</label>
+    <input type="text" id="emailTitle" [(ngModel)]="emailTitle"><br><br>
+  
+    <label for="emailBody">Email Body:</label>
+    <textarea id="emailBody" name="emailBody" rows="8" cols="50" [(ngModel)]="emailBody"></textarea><br><br>
+
+    <label for="to">To:</label>
+    <input type="text" id="to" [(ngModel)]="to"><br><br>
+
+    <label for="sendDate">Send Date:</label>
+    <input type="text" id="sendDate" [(ngModel)]="sendDate"><br><br>
+    
+    <button (click)="sendEmail()">Send Email</button>
+</div>
+  
