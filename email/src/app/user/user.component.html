@@ -11,6 +11,15 @@
     <button (click)="createUser()">Create User</button><br><br>
 </div>
 <div>
+    <label for="userName">User Name:</label>
+    <input type="text" id="userName" [(ngModel)]="userNameSignIn">
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="passwordSignIn">
+
+    <button (click)="signIn()">Sign In</button><br><br>
+</div>
+<div>
     <label for="emailId">Email ID:</label>
     <input type="text" id="emailId" [(ngModel)]="emailId"><br><br>
   
