@@ -11,7 +11,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/users');
+    return this.http.get<any>(`${"https://email-fdj2.onrender.com"}/users`);
   }
 
   getEmail():Observable<any> {
@@ -19,7 +19,7 @@ export class UserService {
   }
 
   createUser(userId: string, userName: string, password: string): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/users', { userId, userName, password })
+    return this.http.post<any>(`${"https://email-fdj2.onrender.com"}/users`, { userId, userName, password })
       .pipe(
         catchError(error => {
           console.error('Error creating user:', error);
