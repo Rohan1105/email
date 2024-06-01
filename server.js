@@ -27,7 +27,7 @@ const emailSchema = new mongoose.Schema({
   emailBody: String,
   to: String,
   sendDate: Date,
-}, { collection: 'emailTable' }); // Specify the collection name for emailSchema
+}); // Specify the collection name for emailSchema
 
 const User = mongoose.model('User', userSchema, 'userTable');
 const Email = mongoose.model('Email', emailSchema, 'emailTable'); // Use 'emailTable' collection for emails
@@ -52,7 +52,7 @@ app.post('/emails', async (req, res) => {
   }
 });
 
-app.get('/', async (req, res) => {
+app.get('/users', async (req, res) => {
   try {
     const userData = await User.find({});
     res.json(userData);

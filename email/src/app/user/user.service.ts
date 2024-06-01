@@ -11,7 +11,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/');
+    return this.http.get<any>('http://localhost:3000/users');
   }
 
   getEmail():Observable<any> {
