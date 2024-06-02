@@ -15,7 +15,7 @@ export class UserService {
   }
 
   getEmail():Observable<any> {
-    return this.http.get<any>('http://localhost:3000/emails');
+    return this.http.get<any>(`${"https://email-fdj2.onrender.com"}/emails`);
   }
 
   createUser(userId: string, userName: string, password: string): Observable<any> {
@@ -33,7 +33,7 @@ export class UserService {
   }
 
   sendEmail(emailId: string, emailTitle: string, emailBody: string, to: string,sendDate: string ): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/emails', { emailId, emailTitle, emailBody, to, sendDate})
+    return this.http.post<any>(`${"https://email-fdj2.onrender.com"}/emails`, { emailId, emailTitle, emailBody, to, sendDate})
       .pipe(
         catchError(error => {
           console.error('Error creating user:', error);
