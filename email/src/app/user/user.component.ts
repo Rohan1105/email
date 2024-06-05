@@ -18,6 +18,7 @@ export class UserComponent implements OnInit {
   emailBody : string = '';
   to : string = '';
   sendDate : string = '';
+  type:string='';
   allUserName : string = '';
   allPassword : string = '';
   history : any = {};
@@ -45,7 +46,7 @@ export class UserComponent implements OnInit {
   }
 
   sendEmail(): void{
-    this.userService.sendEmail(this.emailId,this.emailTitle,this.emailBody,this.to,this.sendDate).subscribe(response => {
+    this.userService.sendEmail(this.emailId,this.emailTitle,this.emailBody,this.to,this.sendDate,this.type).subscribe(response => {
       console.log(response);
     })
   }

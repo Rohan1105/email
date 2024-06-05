@@ -32,8 +32,8 @@ export class UserService {
       );
   }
 
-  sendEmail(emailId: string, emailTitle: string, emailBody: string, to: string,sendDate: string ): Observable<any> {
-    return this.http.post<any>(`${"https://email-fdj2.onrender.com"}/emails`, { emailId, emailTitle, emailBody, to, sendDate})
+  sendEmail(emailId: string, emailTitle: string, emailBody: string, to: string,sendDate: string ,type : string): Observable<any> {
+    return this.http.post<any>(`${"https://email-fdj2.onrender.com"}/emails`, { emailId, emailTitle, emailBody, to, sendDate,type})
       .pipe(
         catchError(error => {
           console.error('Error creating user:', error);
