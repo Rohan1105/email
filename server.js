@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema({
 
 const emailSchema = new mongoose.Schema({
   emailId: String,
+  userName: String,
   emailTitle: String,
   emailBody: String,
   to: String,
@@ -44,8 +45,8 @@ app.get('/emails', async (req, res) => {
 
 app.post('/emails', async (req, res) => {
   try {
-    const { emailId, emailTitle, emailBody, to, sendDate,type} = req.body;
-    const newEmail = new Email({ emailId, emailTitle, emailBody, to, sendDate,type});
+    const { emailId,userName, emailTitle, emailBody, to, sendDate,type} = req.body;
+    const newEmail = new Email({ emailId, userName, emailTitle, emailBody, to, sendDate,type});
     await newEmail.save();
     res.status(201).json({ message: 'Email created successfully' });
   } catch (err) {
