@@ -18,7 +18,6 @@ mongoose.connect('mongodb+srv://rohanpalkgp:KYZi9sb2Imq0rHVz@cluster5.olwvhwi.mo
 const userSchema = new mongoose.Schema({
   userId: String,
   userName: String,
-  userEmail: String,
   password: String,
 });
 
@@ -66,8 +65,8 @@ app.get('/users', async (req, res) => {
 
 app.post('/users', async (req, res) => {
   try {
-    const { userId,userEmail, userName, password } = req.body;
-    const newUser = new User({ userId,userEmail, userName, password });
+    const { userId, userName, password } = req.body;
+    const newUser = new User({ userId, userName, password });
     await newUser.save();
     res.status(201).json({ message: 'User created successfully' });
   } catch (err) {
